@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "qcstrat"
+version = "0.1.0"
+description = "project for QC composite alpha strategy"
+authors = ["kppeterkiss <axx6v4@inf.elte.hu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+lean="^1.0.219"
+numpy = ">=1.21.0"
+pandas = ">=1.3.0"
+python-dateutil = ">=2.8.2"
+scipy = ">=1.7.0"
+matplotlib = ">=3.4.0"
+quantconnect-lean= ">=0.1.0"
+quantconnect-stubs = "^17176"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

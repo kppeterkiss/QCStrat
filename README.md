@@ -114,3 +114,26 @@ The strategy can be configured by modifying the following parameters:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details. 
+
+# Setup
+
+`pip install poetry`
+
+Create `.venv` folder
+
+`poetry install`
+
+`lean project-create --language python "QCStrat"` might be necessary to be able to debug
+
+
+# Run(debug) backtest:
+- start docker
+- poetry shell
+- Debug with Lean CLI
+- `lean backtest "../QCStrat" --debug pycharm`
+- run backtest: `lean backtest "../QCStrat"
+`
+
+
+# research 
+`lean research "../QCStrat"` (https://www.quantconnect.com/docs/v2/lean-cli/research)

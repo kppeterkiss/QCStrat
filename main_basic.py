@@ -1,15 +1,7 @@
+# region imports
 from AlgorithmImports import *
-
-
-from models.aplha_models.technical_alpha import TechnicalIndicatorAlphaModel
-from models.universe_selection.universe_selection import VolumeVolatilityUniverseSelectionModel
-from models.portfolio_construction.PortfolioConstructionModel import PortfolioConstructionModel
-from indicators.indicator_strength import IndicatorStrength
-
-
-
-
-class TradingAlgorithm(QCAlgorithm):
+# endregion
+class LargeCapCryptoUniverseAlgorithm(QCAlgorithm):
     def initialize(self):
         self.set_start_date(2020, 1, 1)
         self.set_end_date(2021, 1, 1)
@@ -32,7 +24,6 @@ class TradingAlgorithm(QCAlgorithm):
         # Select the coins that our brokerage supports and have a quote currency that matches
         # our account currency.
         tradable_coins = [d for d in data if d.coin + self.account_currency in self._market_pairs]
-        self.info("tradable",tradable_coins)
         # Select the largest coins and create their Symbol objects.
         return [
             c.create_symbol(self._market, self.account_currency)
